@@ -20,7 +20,7 @@ required.forEach((key) => {
 });
 
 module.exports = {
-  PORT: process.env.PORT || 3000,
+  PORT: process.env.PORT || 3001,
   SUPABASE_URL: process.env.SUPABASE_URL,
   SUPABASE_SERVICE_KEY: process.env.SUPABASE_SERVICE_KEY,
   FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
