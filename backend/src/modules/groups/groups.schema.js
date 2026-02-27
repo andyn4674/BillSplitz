@@ -8,4 +8,4 @@ const addMemberSchema = z.object({
     friend_id: z.string().min(1, "Invalid friend ID")
 });
 
-modules.export = { createGroupSchema, addMemberSchema };
+module.exports  = { createGroupSchema, addMemberSchema };
