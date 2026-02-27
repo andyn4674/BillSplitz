@@ -8,6 +8,7 @@ app.use(express.json());
 app.use('/auth', require('./modules/auth/auth.routes.js'));
 app.use('/friends', require('./modules/friends/friends.routes.js'));
 app.use('/groups', require('./modules/groups/groups.routes.js'));
+app.use('/scan', require("./modules/scan/scan.routes.js"));
 
 // Health check route to verify server + db connection
 app.get('/health', async (req, res) => {
