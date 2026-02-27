@@ -18,10 +18,10 @@ exports.getFriends = async (userId) => {
 };
 
 /**
- * 
- * @param {*} userId 
- * @param {*} param1 
- * @returns 
+ * Add a new friend 
+ * @param {*} userId current userId
+ * @param {*} param1 friend's name, phone_number 
+ * @returns the new friend added
  */
 exports.addFriend = async (userId, {name, phone_number}) => {
     const {data: newFriend, error} = await db
@@ -35,10 +35,10 @@ exports.addFriend = async (userId, {name, phone_number}) => {
 };
 
 /**
- * 
- * @param {*} friendId 
- * @param {*} userId 
- * @returns 
+ * Delete a friend
+ * @param {*} friendId friend's id
+ * @param {*} userId current user's id
+ * @returns void
  */
 exports.deleteFriend = async (friendId, userId) => {
     const {error} = await db
