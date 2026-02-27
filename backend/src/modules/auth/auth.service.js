@@ -16,6 +16,6 @@ exports.findOrCreate = async ({ firebase_uid, name, email, phoneNumber }) => {
         .insert({ firebase_uid, name, email, phoneNumber })
         .select() // "*" by default
         .single();
-    if(error) return error;
+    if(error) throw error;
     return newUser;
 };

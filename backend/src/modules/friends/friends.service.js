@@ -12,7 +12,7 @@ exports.getFriends = async (userId) => {
         .select()
         .eq("user_id", userId)
         .order("name");
-    if (error) return error;
+    if (error) throw error;
 
     return friends;
 };
@@ -30,7 +30,7 @@ exports.addFriend = async (userId, {name, phone_number}) => {
         .select()
         .single();
 
-    if (error) return error;
+    if (error) throw error;
     return newFriend;
 };
 
@@ -47,6 +47,6 @@ exports.deleteFriend = async (friendId, userId) => {
         .eq('id', friendId)
         .eq('user_id', userId);
 
-    if (error) return error;
+    if (error) throw error;
     return;
 };
